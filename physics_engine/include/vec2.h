@@ -2,6 +2,8 @@
 #define _VEC2_H_
 #endif
 
+#include <cmath.h>
+
 // Vector 2 Definition
 typedef struct {
 	float x;
