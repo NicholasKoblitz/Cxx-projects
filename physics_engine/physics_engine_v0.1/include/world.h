@@ -12,8 +12,8 @@ public:
 	Vec2 gravity;
 	
 // Constructors
-	world() : gravity(Vec2(0,0));
-	world(Vec2 gravity) : gravity(gravity);
+	World() : gravity(Vec2(0,0));
+	World(Vec2 gravity) : gravity(gravity);
 
 // Methods
 	

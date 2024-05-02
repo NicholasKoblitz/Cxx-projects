@@ -10,8 +10,17 @@ public:
 	std::vector<Vec2> vertexes;
 	
 // Constructors
-	Box() : PhysicsBody(), width(1), height(1), vertexes(calcVertexes());
-	Box(width, height, pos, mass) : PhysicsBody(pos, mass), width(width), height(height), vertexes(calcVertexes());
+	Box() :
+		PhysicsBody(),
+		width(1),
+		height(1),
+		vertexes(calcVertexes());
+		
+	Box(float width, float height, Vec2 pos, Vec2 mass) :
+		PhysicsBody(pos, mass),
+		width(width),
+		height(height),
+		vertexes(calcVertexes());
 	
 // Methods
 	
