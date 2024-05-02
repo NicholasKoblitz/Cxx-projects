@@ -28,6 +28,9 @@ public:
 	
 	// Normalizes the vector - makes it a unit vector
 	void normalize();
+	
+	// sets the magnatude of the vector
+	void setMag(unsigned int scalar);
 };
 
 #endif

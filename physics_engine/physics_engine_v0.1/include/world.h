@@ -10,8 +10,8 @@ public:
 // properties 
 	std::vector<PhysicsBody*> bodies;
 	Vec2 gravity;
+	
 // Constructors
-
 	world() : gravity(Vec2(0,0));
 	world(Vec2 gravity) : gravity(gravity);
 
