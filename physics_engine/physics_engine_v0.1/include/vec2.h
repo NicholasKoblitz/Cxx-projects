@@ -9,7 +9,8 @@ public:
 	float y;
 	
 	// constructors
-	Vec2(float x, float y) : x(x), y(y);
+  Vec2() : x(0.0), y(0.0) {};
+	Vec2(float x, float y) : x(x), y(y) {};
 	
 	// Adds a vector to current vector
 	void add(Vec2 a);

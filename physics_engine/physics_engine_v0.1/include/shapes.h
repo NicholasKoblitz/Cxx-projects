@@ -2,11 +2,13 @@
 #define _SHAPES_H_
 
 #include "physicsBody.h"
+#include <vector>
+#include "vec2.h"
 
 class Box : public PhysicsBody {
 public: 
 	float width;
-	float height:
+	float height;
 	std::vector<Vec2> vertexes;
 	
 // Constructors
@@ -14,31 +16,34 @@ public:
 		PhysicsBody(),
 		width(1),
 		height(1),
-		vertexes(calcVertexes());
+		vertexes(calcVertexes()) {};
 		
-	Box(float width, float height, Vec2 pos, Vec2 mass) :
+	Box(float width, float height, Vec2 pos, float mass) :
 		PhysicsBody(pos, mass),
 		width(width),
 		height(height),
-		vertexes(calcVertexes());
+		vertexes(calcVertexes()) {};
 	
 // Methods
 	
 	
 private:
 	// Gets the box's vertexes and stores them from top right and then in a clockwise manner.
-	void calcVertexes() {
+	std::vector<Vec2> calcVertexes() {
+    std::vector<Vec2> temp;
 		Vec2 tr = Vec2(position.x + (width/2), position.y + (height/2));
 		Vec2 br = Vec2(position.x + (width/2), position.y - (height/2));
 		Vec2 bl = Vec2(position.x - (width/2), position.y - (height/2));
 		Vec2 tl = Vec2(position.x - (width/2), position.y + (height/2));
 		
-		vertexes.push_back(tr);
-		vertexes.push_back(br);
-		vertexes.push_back(bl);
-		vertexes.push_back(tl);
+		temp.push_back(tr);
+		temp.push_back(br);
+		temp.push_back(bl);
+		temp.push_back(tl);
+
+    return temp;
 	}
-}
+};
 
 
 class Circle : public PhysicsBody {
@@ -46,9 +51,9 @@ public:
 	float radius;
 	
 // Constructors
-	Circle() : radius(1);
-	Circle(radius) : radius(radius);
-}
+	Circle() : radius(1) {}
+	Circle(float radius) : radius(radius) {}
+};
 
 
 

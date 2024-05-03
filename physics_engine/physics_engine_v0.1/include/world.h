@@ -3,7 +3,7 @@
 
 #include "vec2.h"
 #include "physicsBody.h"
-#include <vector.h>
+#include <vector>
 
 class World{
 public:
@@ -12,8 +12,8 @@ public:
 	Vec2 gravity;
 	
 // Constructors
-	World() : gravity(Vec2(0,0));
-	World(Vec2 gravity) : gravity(gravity);
+	World() : gravity(Vec2(0,0)) {};
+	World(Vec2 gravity) : gravity(gravity) {};
 
 // Methods
 	
@@ -22,6 +22,6 @@ public:
 	
 // Steps through the physics simulation
 	void step();
-}
+};
 
 #endif

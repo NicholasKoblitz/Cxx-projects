@@ -2,7 +2,6 @@
 #define _PHYSICSBODY_H_
 
 #include "vec2.h"
-#include "shapes.h"
 
 class PhysicsBody {
 public:
@@ -19,18 +18,18 @@ public:
 		velocity(Vec2(0,0)),
 		acceleration(Vec2(0,0)),
 		force(Vec2(0,0)),
-		mass(1.0);
+		mass(1.0) {};
 		
 	PhysicsBody(Vec2 pos, float mass) :
 		position(pos),
 		velocity(Vec2(0,0)),
 		acceleration(Vec2(0,0)),
 		force(Vec2(0,0)),
-		mass(mass);
+		mass(mass) {};
 	
 	// Methods
 	
 	
-}
+};
 
 #endif
