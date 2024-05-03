@@ -18,7 +18,7 @@ public:
 // Methods
 	
 // Adds a PhysicsBody to the world
-	void addBody(PhysicsBody a);
+	void addBody(PhysicsBody &a);
 	
 // Steps through the physics simulation
 	void step();
