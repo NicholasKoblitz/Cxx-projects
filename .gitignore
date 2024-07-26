@@ -1,3 +1,5 @@
 .ccls-cache/
 .replit
 replit.nix
+console_game/build/
+console_game/src/classes/build
